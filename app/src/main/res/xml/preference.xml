@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Copyright 2016 Alexander Sharamkov
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+    -->
+
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <PreferenceCategory android:title="@string/pref_normal_priority_category_title">
+
+        <RingtonePreference
+            android:defaultValue="content://settings/system/notification_sound"
+            android:key="@string/pref_normal_priority_ringtone_key"
+            android:ringtoneType="notification"
+            android:showDefault="true"
+            android:showSilent="true"
+            android:summary="@string/pref_normal_priority_ringtone_summary"
+            android:title="@string/pref_normal_priority_ringtone_title" />
+
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="@string/pref_normal_priority_vibration_key"
+            android:summary="@string/pref_normal_priority_vibration_summary"
+            android:title="@string/pref_normal_priority_vibration_title" />
+
+        <ListPreference
+            android:defaultValue="-1"
+            android:entries="@array/pref_notification_repeat_number_entries"
+            android:entryValues="@array/pref_notification_repeat_number_entry_values"
+            android:key="@string/pref_normal_priority_repeat_number_key"
+            android:summary="@string/pref_normal_priority_notification_repeat_number_summary"
+            android:title="@string/pref_normal_priority_notification_repeat_number_title" />
+
+        <ListPreference
+            android:defaultValue="5"
+            android:entries="@array/pref_notification_repeat_time_interval_entries"
+            android:entryValues="@array/pref_notification_repeat_time_interval_entry_values"
+            android:key="@string/pref_normal_priority_repeat_interval_key"
+            android:summary="@string/pref_normal_priority_notification_repeat_time_interval_summary"
+            android:title="@string/pref_normal_priority_notification_repeat_time_interval_title" />
+
+
+    </PreferenceCategory>
+
+
+    <PreferenceCategory android:title="@string/pref_high_priority_category_title">
+
+        <RingtonePreference
+            android:defaultValue="content://settings/system/notification_sound"
+            android:key="@string/pref_high_priority_ringtone_key"
+            android:ringtoneType="notification"
+            android:showDefault="true"
+            android:showSilent="true"
+            android:summary="@string/pref_high_priority_ringtone_summary"
+            android:title="@string/pref_high_priority_ringtone_title" />
+
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="@string/pref_high_priority_vibration_key"
+            android:summary="@string/pref_high_priority_vibration_summary"
+            android:title="@string/pref_high_priority_vibration_title" />
+
+        <ListPreference
+            android:defaultValue="-1"
+            android:entries="@array/pref_notification_repeat_number_entries"
+            android:entryValues="@array/pref_notification_repeat_number_entry_values"
+            android:key="@string/pref_high_priority_repeat_number_key"
+            android:summary="@string/pref_high_priority_notification_repeat_number_summary"
+            android:title="@string/pref_high_priority_notification_repeat_number_title" />
+
+        <ListPreference
+            android:defaultValue="5"
+            android:entries="@array/pref_notification_repeat_time_interval_entries"
+            android:entryValues="@array/pref_notification_repeat_time_interval_entry_values"
+            android:key="@string/pref_high_priority_repeat_interval_key"
+            android:summary="@string/pref_high_priority_notification_repeat_time_interval_summary"
+            android:title="@string/pref_high_priority_notification_repeat_time_interval_title" />
+
+
+    </PreferenceCategory>
+</PreferenceScreen>

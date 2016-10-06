@@ -1,0 +1,126 @@
+<!--
+    Copyright 2016 Alexander Sharamkov
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+    -->
+
+
+<resources
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <string name="app_name">Simple Reminder</string>
+
+
+    <!--new/edit reminder dialog -->
+    <string name="new_reminder_dialog_title">Новое Напоминание</string>
+    <string name="edit_reminder_dialog_title">Редактировать</string>
+    <string name="high_priority">Высокий приоритет</string>
+    <string name="title_hint">Заголовок</string>
+    <string name="date_hint">Дата</string>
+    <string name="time_hint">Время</string>
+    <string name="title_error">Пожалуйста, введите заголовок</string>
+    <string name="positive_button">OK</string>
+    <string name="negative_button">Отмена</string>
+    <string name="repeat_checkbox_text">Повторить</string>
+    <string name="interval_type_hint">Интервал</string>
+    <string name="number_of_intervals_hint">Число</string>
+    <string-array name="interval_types">
+        <item>Минута</item>
+        <item>Час</item>
+        <item>День</item>
+        <item>Неделя</item>
+        <item>Месяц</item>
+        <item>Год</item>
+    </string-array>
+
+
+    <!--reminder entry -->
+    <string name="no_date">Без даты</string>
+    <string name="no_repeats">Без повторений</string>
+    <string name="repeat_interval">Интервал повторения: %s</string>
+    <string name="disable_reminder_toast_message">ОТКЛЮЧЕНО</string>
+    <string name="enable_active_reminder_toast_message">ВКЛЮЧЕНО</string>
+    <string name="enable_inactive_reminder_toast_message">НЕ АКТИВНО</string>
+
+    <!--repeat interval type dialog -->
+    <string name="repeat_interval_type_dialog_title">Интервал повторения</string>
+
+    <!-- repeat interval number dialog -->
+    <string name="repeat_interval_number_dialog_title">Число интервалов</string>
+
+    <!-- delete reminder dialog -->
+    <string name="delete_reminder_dialog_title">Удалить напоминание?</string>
+    <string name="delete_reminder_dialog_positive_button">Удалить</string>
+    <string name="delete_reminder_dialog_negative_button">Отмена</string>
+
+
+    <!--preferences item of options menu -->
+    <string name="menu_item_preferences">Настройки</string>
+
+
+    <!--titles and summaries for normal priority reminders preferences -->
+    <string name="pref_normal_priority_category_title">Нормальный приоритет</string>
+    <string name="pref_normal_priority_ringtone_title">Звук уведомления</string>
+    <string name="pref_normal_priority_ringtone_summary">Звук для напоминаний с нормальным приоритетом</string>
+    <string name="pref_normal_priority_vibration_title">Вибрация</string>
+    <string name="pref_normal_priority_vibration_summary">Вибрация для напоминаний с нормальным приоритетом</string>
+    <string name="pref_normal_priority_notification_repeat_number_title">Число повторений</string>
+    <string name="pref_normal_priority_notification_repeat_number_summary">Повторение уведомления для напоминаний с нормальным приоритетом</string>
+    <string name="pref_normal_priority_notification_repeat_time_interval_title">Интервал повторения</string>
+    <string name="pref_normal_priority_notification_repeat_time_interval_summary">Временной интервал между сигналами уведомления</string>
+
+
+    <!--titles and summaries for high priority reminders preferences -->
+    <string name="pref_high_priority_category_title">Высокий приоритет</string>
+    <string name="pref_high_priority_ringtone_title">Звук уведомления</string>
+    <string name="pref_high_priority_ringtone_summary">Звук для напоминаний с высоким приоритетом</string>
+    <string name="pref_high_priority_vibration_title">Вибрация</string>
+    <string name="pref_high_priority_vibration_summary">Вибрация для напоминаний с высоким приоритетом</string>
+    <string name="pref_high_priority_notification_repeat_number_title">Число повторений</string>
+    <string name="pref_high_priority_notification_repeat_number_summary">Повторение уведомления для напоминаний с высоким приоритетом</string>
+    <string name="pref_high_priority_notification_repeat_time_interval_title">Интервал повторения</string>
+    <string name="pref_high_priority_notification_repeat_time_interval_summary">Временной интервал между сигналами уведомления</string>
+
+
+    <!--entries for reminders with normal and high priority-->
+    <string-array name="pref_notification_repeat_number_entries">
+        <item>Без повторений</item>
+        <item>1 повторение</item>
+        <item>3 повторения</item>
+        <item>5 повторений</item>
+        <item>10 повторений</item>
+        <item>15 повторений</item>
+        <item>20 повторений</item>
+        <item>30 повторений</item>
+        <item>50 повторений</item>
+        <item>100 повторений</item>
+        <item>Неограниченные повторения</item>
+    </string-array>
+
+
+    <string-array name="pref_notification_repeat_time_interval_entries">
+        <item>5 секунд</item>
+        <item>10 секунд</item>
+        <item>15 секунд</item>
+        <item>20 секунд</item>
+        <item>25 секунд</item>
+        <item>30 секунд</item>
+        <item>35 секунд</item>
+        <item>40 секунд</item>
+        <item>45 секунд</item>
+        <item>50 секунд</item>
+        <item>55 секунд</item>
+    </string-array>
+
+
+</resources>

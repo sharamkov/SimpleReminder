@@ -1,0 +1,194 @@
+<!--
+    Copyright 2016 Alexander Sharamkov
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+    -->
+
+
+<resources
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingTranslation">
+
+    <string name="app_name">Simple Reminder</string>
+
+
+    <!--new/edit reminder dialog -->
+    <string name="new_reminder_dialog_title">New Reminder</string>
+    <string name="edit_reminder_dialog_title">Edit Reminder</string>
+    <string name="high_priority">High priority</string>
+    <string name="title_hint">Title</string>
+    <string name="date_hint">Date</string>
+    <string name="time_hint">Time</string>
+    <string name="title_error">Please enter title</string>
+    <string name="positive_button">OK</string>
+    <string name="negative_button">Cancel</string>
+    <string name="repeat_checkbox_text">Repeat</string>
+    <string name="interval_type_hint">Interval</string>
+    <string name="number_of_intervals_hint">Number</string>
+
+    <string-array name="interval_types">
+        <item>Minute</item>
+        <item>Hour</item>
+        <item>Day</item>
+        <item>Week</item>
+        <item>Month</item>
+        <item>Year</item>
+    </string-array>
+
+
+    <!--reminder entry -->
+    <string name="no_date">No date</string>
+    <string name="no_repeats">No repeats</string>
+    <string name="repeat_interval">Repeat interval: %s</string>
+    <string name="disable_reminder_toast_message">DISABLED</string>
+    <string name="enable_active_reminder_toast_message">ENABLED</string>
+    <string name="enable_inactive_reminder_toast_message">NO ACTIVE</string>
+
+    <!--repeat interval type dialog -->
+    <string name="repeat_interval_type_dialog_title">Repeat Interval</string>
+
+    <!-- repeat interval number dialog -->
+    <string name="repeat_interval_number_dialog_title">Number of Intervals</string>
+
+    <!-- delete reminder dialog -->
+    <string name="delete_reminder_dialog_title">Delete the reminder?</string>
+    <string name="delete_reminder_dialog_positive_button">Delete</string>
+    <string name="delete_reminder_dialog_negative_button">Cancel</string>
+
+    <!--preferences item of options menu -->
+    <string name="menu_item_preferences">Preferences</string>
+
+
+    <!--titles and summaries for normal priority reminders preferences -->
+    <string name="pref_normal_priority_category_title">Normal priority</string>
+    <string name="pref_normal_priority_ringtone_title">Notification sound</string>
+    <string name="pref_normal_priority_ringtone_summary">Sound for reminders with normal priority</string>
+    <string name="pref_normal_priority_vibration_title">Vibration</string>
+    <string name="pref_normal_priority_vibration_summary">Vibration for reminders with normal priority</string>
+    <string name="pref_normal_priority_notification_repeat_number_title">Repeat number</string>
+    <string name="pref_normal_priority_notification_repeat_number_summary">Notification repeat number for reminders with normal priority</string>
+    <string name="pref_normal_priority_notification_repeat_time_interval_title">Repeat interval</string>
+    <string name="pref_normal_priority_notification_repeat_time_interval_summary">Time interval between notification repeats</string>
+
+
+    <!--keys for normal priority reminders preferences -->
+    <string name="pref_normal_priority_ringtone_key" translatable="false">Normal priority ringtone key</string>
+    <string name="pref_normal_priority_vibration_key" translatable="false">Normal priority vibration key</string>
+    <string name="pref_normal_priority_repeat_number_key" translatable="false">Normal priority repeat number key</string>
+    <string name="pref_normal_priority_repeat_interval_key" translatable="false">Normal priority repeat interval key</string>
+
+
+    <!--titles and summaries for high priority reminders preferences -->
+    <string name="pref_high_priority_category_title">High priority</string>
+    <string name="pref_high_priority_ringtone_title">Notification sound</string>
+    <string name="pref_high_priority_ringtone_summary">Sound for reminders with high priority</string>
+    <string name="pref_high_priority_vibration_title">Vibration</string>
+    <string name="pref_high_priority_vibration_summary">Vibration for reminders with high priority</string>
+    <string name="pref_high_priority_notification_repeat_number_title">Repeat number</string>
+    <string name="pref_high_priority_notification_repeat_number_summary">Notification repeat number for reminders with high priority</string>
+    <string name="pref_high_priority_notification_repeat_time_interval_title">Repeat interval</string>
+    <string name="pref_high_priority_notification_repeat_time_interval_summary">Time interval between notification repeats</string>
+
+    <!--keys for high priority reminders preferences -->
+    <string name="pref_high_priority_ringtone_key" translatable="false">High priority ringtone key</string>
+    <string name="pref_high_priority_vibration_key" translatable="false">High priority vibration key</string>
+    <string name="pref_high_priority_repeat_number_key" translatable="false">High priority repeat number key</string>
+    <string name="pref_high_priority_repeat_interval_key" translatable="false">High priority repeat interval key</string>
+
+    <!--entries and values for reminders with normal and high priority-->
+    <string-array name="pref_notification_repeat_number_entries">
+        <item>No repeats</item>
+        <item>1 repeat</item>
+        <item>3 repeats</item>
+        <item>5 repeats</item>
+        <item>10 repeats</item>
+        <item>15 repeats</item>
+        <item>20 repeats</item>
+        <item>30 repeats</item>
+        <item>50 repeats</item>
+        <item>100 repeats</item>
+        <item>Unlimited repeats</item>
+    </string-array>
+
+    <string-array name="pref_notification_repeat_number_entry_values">
+        <item>0</item>
+        <item>1</item>
+        <item>3</item>
+        <item>5</item>
+        <item>10</item>
+        <item>15</item>
+        <item>20</item>
+        <item>30</item>
+        <item>50</item>
+        <item>100</item>
+        <item>-1</item>
+    </string-array>
+
+    <string-array name="pref_notification_repeat_time_interval_entries">
+        <item>5 seconds</item>
+        <item>10 seconds</item>
+        <item>15 seconds</item>
+        <item>20 seconds</item>
+        <item>25 seconds</item>
+        <item>30 seconds</item>
+        <item>35 seconds</item>
+        <item>40 seconds</item>
+        <item>45 seconds</item>
+        <item>50 seconds</item>
+        <item>55 seconds</item>
+    </string-array>
+
+    <string-array name="pref_notification_repeat_time_interval_entry_values">
+        <item>5</item>
+        <item>10</item>
+        <item>15</item>
+        <item>20</item>
+        <item>25</item>
+        <item>30</item>
+        <item>35</item>
+        <item>40</item>
+        <item>45</item>
+        <item>50</item>
+        <item>55</item>
+    </string-array>
+
+
+    <!--different forms of interval names for ru locale -->
+    <string-array name="interval_types_form1">
+        <item>минута</item>
+        <item>час</item>
+        <item>день</item>
+        <item>неделя</item>
+        <item>месяц</item>
+        <item>год</item>
+    </string-array>
+
+    <string-array name="interval_types_form2">
+        <item>минуты</item>
+        <item>часа</item>
+        <item>дня</item>
+        <item>недели</item>
+        <item>месяца</item>
+        <item>года</item>
+    </string-array>
+
+    <string-array name="interval_types_form3">
+        <item>минут</item>
+        <item>часов</item>
+        <item>дней</item>
+        <item>недель</item>
+        <item>месяцев</item>
+        <item>лет</item>
+    </string-array>
+
+</resources>
