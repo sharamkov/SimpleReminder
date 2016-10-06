@@ -9,7 +9,9 @@ Features
 - Free and ad-free
 
 
-<a href="https://play.google.com/store/apps/details?id=sharamkov.androidapp.simplereminder" src="https://play.google.com/intl/en_us/badges/images/apps/en-play-badge.png" width="400"/></a>
+<a href="https://play.google.com/store/apps/details?id=sharamkov.androidapp.simplereminder">
+	<img alt="Simple Reminder on Google Play" src="https://play.google.com/intl/en_us/badges/images/apps/en-play-badge.png" width="400"/>
+</a>
 
 Screenshots
 -------
