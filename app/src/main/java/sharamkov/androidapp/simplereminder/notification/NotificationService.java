@@ -74,6 +74,7 @@ public class NotificationService extends Service {
     private Vibrator vibrator;
 
     private boolean isVibration;
+    private boolean isRingtone;
 
     private String repeatNumberKey, repeatIntervalKey;
 
@@ -100,7 +101,7 @@ public class NotificationService extends Service {
         // user has set in the app preferences. The default value is -1 (infinite repeats)
         int repeatNumber = Integer.parseInt(sharedPreferences.getString(repeatNumberKey, "-1"));
 
-        if (repeatNumber != 0) {
+        if ((isRingtone || isVibration) && repeatNumber != 0) {
             // The repeatInterval is the repeat interval between two subsequent notification signals.
             // The default value is 5 (five seconds).
             int repeatInterval = Integer.parseInt(sharedPreferences.getString(repeatIntervalKey, "5")) * 1000;
@@ -117,7 +118,12 @@ public class NotificationService extends Service {
     private void startNotificationTimerTask(int repeatNumber, int repeatInterval) {
 
         if (notificationTimerTask != null) {
-            ringtone.stop();
+
+
+
+            if (ringtone != null) {
+                ringtone.stop();
+            }
 
             if (isVibration) {
                 vibrator.cancel();
@@ -125,10 +131,14 @@ public class NotificationService extends Service {
 
             notificationTimerTask.cancel();
 
+
         }
 
-        ringtone = RingtoneManager.getRingtone(this, ringtoneUri);
-        ringtone.setStreamType(AudioManager.STREAM_NOTIFICATION);
+
+        if (isRingtone) {
+            ringtone = RingtoneManager.getRingtone(this, ringtoneUri);
+            ringtone.setStreamType(AudioManager.STREAM_NOTIFICATION);
+        }
 
         notificationTimerTask = new NotificationTimerTask(repeatNumber);
         timer.schedule(notificationTimerTask, repeatInterval, repeatInterval);
@@ -157,7 +167,10 @@ public class NotificationService extends Service {
 
             if (repeatNumber-- != 0) {
 
-                ringtone.play();
+
+                if (isRingtone) {
+                    ringtone.play();
+                }
 
                 if (isVibration) {
                     vibrator.vibrate(1500);
@@ -236,8 +249,11 @@ public class NotificationService extends Service {
 
         sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
 
-        ringtoneUri = Uri.parse(sharedPreferences.getString(ringtoneKey, "content://settings/system/notification_sound"));
+        String uriString = sharedPreferences.getString(ringtoneKey, "content://settings/system/notification_sound");
 
+        isRingtone = !"".equals(uriString);
+
+        ringtoneUri = Uri.parse(uriString);
 
         builder.setSound(ringtoneUri);
         builder.setContentTitle("SimpleReminder");
@@ -373,6 +389,7 @@ public class NotificationService extends Service {
 
     @Override
     public void onDestroy() {
+
 
         if (ringtone != null) {
             ringtone.stop();
