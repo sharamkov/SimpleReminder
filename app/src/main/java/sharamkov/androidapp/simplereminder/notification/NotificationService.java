@@ -190,7 +190,6 @@ public class NotificationService extends Service {
         final long key = intent.getLongExtra(KEY, 0);
         String contentText = intent.getStringExtra(TITLE);
         long date = intent.getLongExtra(DATE, 0L);
-        int repeatInterval = intent.getIntExtra(REPEAT_INTERVAL, ReminderEntity.NO_REPEATS);
         int repeatIntervalNumber = intent.getIntExtra(REPEAT_INTERVAL_NUMBER, 1);
         int priority = intent.getIntExtra(PRIORITY, ReminderEntity.PRIORITY_NORMAL);
 
