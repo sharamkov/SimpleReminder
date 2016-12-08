@@ -54,6 +54,22 @@ public class ReminderDatabaseManager {
     }
 
 
+    public int getRepeatIntervalByKey(long key) {
+
+        int repeatInterval = 0;
+
+        Cursor cursor = readableDatabase.query(ReminderDatabaseHelper.TABLE, new String[]{ReminderDatabaseHelper.COLUMN_REPEAT_INTERVAL},
+        ReminderDatabaseHelper.COLUMN_KEY + "=" + key, null, null, null, null);
+
+        if(cursor.moveToFirst()){
+            int repeatIntervalColumnIndex = cursor.getColumnIndex(ReminderDatabaseHelper.COLUMN_REPEAT_INTERVAL);
+            repeatInterval = cursor.getInt(repeatIntervalColumnIndex);
+        }
+
+        return repeatInterval;
+    }
+
+
     public void insertReminder(ReminderEntity reminderEntity) {
 
         ContentValues contentValues = new ContentValues();

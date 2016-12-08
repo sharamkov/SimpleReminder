@@ -284,17 +284,19 @@ public class NotificationService extends Service {
         notificationManager.notify((int) key, builder.build());
 
 
-        setRepeat(date, repeatInterval, repeatIntervalNumber, key, contentText, priority);
+        setRepeat(date, repeatIntervalNumber, key, contentText, priority);
 
 
     }
 
 
     // This method sets the next alarm if necessary using the AlarmHelper.
-    private void setRepeat(long date, int repeatInterval, int repeatIntervalNumber,
+    private void setRepeat(long date, int repeatIntervalNumber,
                            final long key, String title, int priority) {
 
         ReminderDatabaseHelper.init(context);
+
+        int repeatInterval = ReminderDatabaseManager.getInstance().getRepeatIntervalByKey(key);
 
         if (repeatInterval != ReminderEntity.NO_REPEATS) {
 
